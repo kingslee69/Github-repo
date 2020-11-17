@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <nav>
+      <!-- These are the responsive icons for the mobile view -->
+      <img
+        onclick="handleDropdown()"
+        src="./images/icons/menu.svg"
+        alt="menu"
+        class="icon-md icon mx-6 menu mobile-only"
+      />
+
+      <img
+        src="./images/icons/github icon.svg"
+        alt="Github logo"
+        class="icon-bg icon mx-6 brand"
+      />
+
+      <a href="#notification" class="icon mx-9 notification mobile-only"
+        ><img src="./images/icons/alarm.svg" alt="notification icon"
+      /></a>
+
+      <!-- The rest of the nav is the dropdown in mobile view and for desktop the full nav -->
+      <div style="display: inline" id="dropdown" class="disappear">
+        <input
+          type="search"
+          class="nav-search mx-6"
+          placeholder="Search or jump to..."
+        />
+
+        <a href="#" class="responsive nav-link split-top mx-6 mobile-only tall"
+          >Dashboard</a
+        >
+        <a href="#" class="nav-link split-top mx-6 tall">Pull requests</a>
+        <a href="#" class="nav-link split-top mx-6 tall">Issues</a>
+        <a href="#" class="nav-link split-top mx-6 tall">Marketplace</a>
+        <a href="#" class="nav-link split-top split-bottom mx-6 tall"
+          >Explore</a
+        >
+
+        <!-- these icons are float to right on desktop view -->
+        <div class="right">
+          <!-- notification icon -->
+          <a href="#notification" class="icon mx-9 notification disappear"
+            ><img src="./images/icons/alarm.svg" alt="notification icon"
+          /></a>
+
+          <!-- The add icon -->
+          <div class="icon duo-icon mx-6 desktop-only">
+            <img
+              class="mx-3 icon-sm"
+              src="./images/icons/plus.svg"
+              alt="Add icon"
+            />
+            <img
+              class="mx-3 icon-mm"
+              src="./images/icons/dropdown.svg"
+              alt="dropdown"
+            />
+          </div>
+
+          <!-- The profile icon -->
+          <div class="icon duo-icon">
+            <img
+              class="icon-md profile-icon mx-3"
+              src="./images/profile.jpg"
+              alt="profile icon"
+            />
+            <img
+              class="icon-mm desktop-only"
+              src="./images/icons/dropdown.svg"
+              alt="dropdown"
+            />
+            <a href="#" class="div-link mx-6 mobile-only">Kingslee69</a>
+          </div>
+
+          <!-- the logout icon only appears on mobile view dropdown -->
+          <div class="icon duo-icon split-top mt-10">
+            <img
+              class="icon-sm mx-6 mobile-only"
+              src="./images/icons/logout 1.svg"
+              alt="logout icon"
+            />
+            <a href="#" class="div-link mx-6 tall mobile-only">Signout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section style="padding: 50px; background-color: var(--link)" id="pop-up">
+      halo
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
