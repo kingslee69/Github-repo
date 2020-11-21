@@ -53,7 +53,10 @@
           /></a>
 
           <!-- The add icon -->
-          <div class="icon duo-icon mx-6 desktop-only">
+          <div
+            onclick="handleAddPopUp()"
+            class="icon duo-icon mx-6 desktop-only"
+          >
             <img
               class="mx-3 icon-sm"
               src="./images/icons/plus.svg"
@@ -67,7 +70,7 @@
           </div>
 
           <!-- The profile icon -->
-          <div class="icon duo-icon">
+          <div class="icon duo-icon" onclick="handleProfilePopUp()">
             <img
               class="icon-md profile-icon mx-3"
               src="./images/profile.jpg"
@@ -94,8 +97,115 @@
       </div>
     </nav>
 
-    <section style="padding: 50px; background-color: var(--link)" id="pop-up">
-      halo
+    <!-- Add icon pop-up -->
+    <div
+      onclick="addPopUpHtml.closeAddPopUp();"
+      id="add-pop-up"
+      class="desktop-only pop-disappear pop-up-screen"
+    >
+      <div class="pop-up add-pop-up py-6">
+        <a href="#" class="pop-up-link">New repository</a>
+        <a href="#" class="pop-up-link">Import repository</a>
+        <a href="#" class="pop-up-link">New gist</a>
+        <a href="#" class="pop-up-link">New organization</a>
+        <a href="#" class="pop-up-link">New project</a>
+        <div class="pop-up-pointer"></div>
+      </div>
+    </div>
+    <!-- profile icon pop-up -->
+    <div
+      onclick="profilePopUpHtml.closeProfilePopUp();"
+      id="profile-pop-up"
+      class="desktop-only pop-disappear pop-up-screen"
+    >
+      <div class="pop-up profile-pop-up py-6">
+        <a
+          href="#"
+          class="pop-link"
+          style="
+            border-bottom: 1px solid var(--light-secondary);
+            line-height: 150%;
+            padding-bottom: 10px;
+          "
+          >Signed in as <span style="font-weight: 700">kingslee69</span></a
+        >
+        <a
+          href="#"
+          class="pop-link"
+          style="
+            border: 1px solid var(--light-secondary);
+            margin: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+          "
+          ><img src="./images/icons/smile.svg" alt="smilee icon" />
+          <p style="font-size: 12px; margin-left: 10px">set as status</p></a
+        >
+        <a
+          href="#your-profile"
+          class="pop-up-link"
+          style="border-top: 1px solid var(--light-secondary)"
+          >Your Profile</a
+        >
+        <a href="#" class="pop-up-link">Your repositories</a>
+        <a href="#" class="pop-up-link">Your projects</a>
+        <a href="#" class="pop-up-link">Your stars</a>
+        <a href="#" class="pop-up-link" style="margin-bottom: 10px"
+          >Your gists</a
+        >
+        <a
+          href="#"
+          class="pop-up-link"
+          style="border-top: 1px solid var(--light-secondary)"
+          >Upgrade</a
+        >
+        <a href="#" class="pop-up-link">Feature preview</a>
+        <a href="#" class="pop-up-link">Help</a>
+        <a href="#" class="pop-up-link">Settings</a>
+        <a href="#" class="pop-up-link">Sign out</a>
+        <div class="pop-up-pointer"></div>
+      </div>
+    </div>
+
+    <section id="page-navigator" style="" class="navigator">
+      <a
+        href="#"
+        class="navigator-link duo-icon"
+        style="justify-content: center"
+      >
+        <img src="./images/icons/Overview icon.svg" alt="overview" />
+        <p style="margin-left: 10px">Overview</p></a
+      >
+      <a
+        href="#"
+        class="navigator-link duo-icon active"
+        style="justify-content: center"
+      >
+        <img src="./images/icons/Repository icon.svg" alt="overview" />
+        <p style="margin-left: 10px">Repository</p>
+        <div class="badge">6</div>
+      </a>
+      <a
+        href="#"
+        class="navigator-link duo-icon"
+        style="justify-content: center"
+      >
+        <img src="./images/icons/Project icon.svg" alt="overview" />
+        <p style="margin-left: 10px">Projects</p></a
+      >
+      <a
+        href="#"
+        class="navigator-link duo-icon"
+        style="justify-content: center"
+      >
+        <img src="./images/icons/Package icon.svg" alt="overview" />
+        <p style="margin-left: 10px">Packages</p></a
+      >
+    </section>
+
+    <section class="col-2">
+      <div class="element"></div>
+      <div class="element"></div>
     </section>
 
     <script src="index.js"></script>
