@@ -167,7 +167,8 @@
       </div>
     </div>
 
-    <section id="page-navigator" style="" class="navigator">
+    <!-- the repo sub-nav begin here -->
+    <section id="page-navigator" style="" class="navigator sticky-top x-scroll">
       <a
         href="#"
         class="navigator-link duo-icon"
@@ -203,9 +204,73 @@
       >
     </section>
 
-    <section class="col-2">
-      <div class="element"></div>
-      <div class="element"></div>
+    <!-- the body begins here -->
+    <section class="col-2" style="margin-top: 10px">
+      <!-- Here's the profile part of the page -->
+      <div class="profile-col">
+        <div class="mobile-flex">
+          <img
+            src="./images/profile.jpg"
+            alt="profile-pic"
+            class="profile-picture front"
+          />
+          <div class="user">
+            <p class="profile-name">Nworie Obinna Kingsley</p>
+            <p class="username">Kingslee69</p>
+          </div>
+        </div>
+
+        <div class="smiley front">
+          <img src="./images/icons/smile.svg" alt="smilee icon" />
+          <p class="mobile-only">Set status</p>
+        </div>
+
+        <p class="text-reg">
+          A computer Engineering student, tech enthusiast, a programmer and a
+          graphic designer.
+        </p>
+        <button class="btn btn-fluid">Edit Profile</button>
+
+        <div class="followers duo-icon">
+          <img src="./images/icons/followers.svg" alt="followers icon" />
+          <p><span>0</span>followers</p>
+          <p><span>0</span>following</p>
+          <div class="duo-icon">
+            <img src="./images/icons/star.svg" alt="star icon" />
+            <p style="margin-left: 5px">5</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="element repo-col">
+        <div id="btn-section" class="duo-icon wrap">
+          <input
+            type="search"
+            class="search-light mx-6"
+            placeholder="Search or jump to..."
+          />
+
+          <div class="duo-icon btn-div">
+            <div class="duo-icon mx-6">
+              <button style="margin-right: 10px" class="btn">
+                Edit Profile
+              </button>
+              <button class="btn">Edit Profile</button>
+            </div>
+
+            <button
+              class="btn btn-go mx-6 duo-icon"
+              style="align-items: center"
+            >
+              <img
+                src="./images/icons/Repository-light icon.png"
+                alt="repo-icon"
+              />
+              <p class="mx-3">New</p>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="index.js"></script>

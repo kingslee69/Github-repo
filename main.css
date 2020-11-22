@@ -187,27 +187,37 @@ input[type='search'] {
 }
 
 .navigator {
-  width: 100%;
-  margin-top: 40px;
+  background-color: var(--light);
   display: flex;
-  justify-content: center;
   border-bottom: 1px solid var(--light-secondary);
+  position: absolute;
+  padding-left: 32%;
+  margin-top: 20px;
+}
+
+.x-scroll {
+  /* this makes the horizontal scroll possible */
+  overflow: auto;
+  white-space: nowrap;
 }
 .navigator-link {
-  padding-bottom: 10px;
-  padding-left: auto;
-  padding-right: auto;
-  width: 150px;
   line-height: 200%;
-  padding-left: 10px;
+  padding: 8px;
   color: var(--dark);
   opacity: 0.8;
+  border-bottom: 2px solid var(--light);
 }
 .navigator-link:hover {
   border-bottom: 2px solid #bdbfc4;
 }
 
 .active {
+  opacity: 1;
+  font-weight: 600;
+  border-bottom: 2px solid var(--highlight);
+  cursor: pointer;
+}
+.active:hover {
   opacity: 1;
   font-weight: 600;
   border-bottom: 2px solid var(--highlight);
@@ -220,6 +230,152 @@ input[type='search'] {
   line-height: 180%;
   background-color: var(--light-secondary);
   border-radius: 15px;
+}
+
+.sticky-top {
+  /* this makes an element sticky when they reach the top = 0 */
+  position: sticky;
+  top: 0px;
+}
+
+.col-2 {
+  display: grid;
+  grid-template-columns: 25% auto;
+  grid-column-gap: 40px;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+/* delete this afterwards */
+.element {
+  border: 1px solid var(--light-secondary);
+  border-radius: 15px;
+}
+
+.profile-col {
+  padding: 10px;
+  position: relative;
+  bottom: 60px;
+  width: 100%;
+}
+
+.profile-picture {
+  border: 1px solid #e1e5ea;
+  border-radius: 150px;
+}
+
+.front {
+  max-width: 100%;
+}
+
+.smiley {
+  padding: auto;
+  background-color: var(--light);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--light-secondary);
+  display: flex;
+
+  position: absolute;
+  bottom: 270px;
+  left: 80%;
+}
+
+@media screen and (max-width: 1237px) {
+  .smiley {
+    position: absolute;
+    bottom: 300px;
+    left: 80%;
+  }
+}
+@media screen and (max-width: 915px) {
+  .smiley {
+    position: absolute;
+    bottom: 310px;
+    left: 81%;
+  }
+}
+
+.smiley > img {
+  margin: auto;
+}
+
+.profile-name {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-secondary);
+}
+.text-reg {
+  margin: 12px 0px;
+}
+.front {
+  z-index: 100;
+}
+
+.btn {
+  padding: 6px 9px;
+  font-weight: 500;
+
+  background-color: #fcfcfc;
+  border: 1px solid var(--light-secondary);
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(225, 229, 234, 0.5);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #f7f7f7;
+  transition: ease-out, 0.2s ease-in-out;
+}
+
+.btn-fluid {
+  width: 100%;
+}
+
+.btn-go {
+  background-color: var(--success);
+  color: var(--light);
+  border: 1px solid #f7f7f7;
+}
+.btn-go:hover {
+  background-color: #229643;
+  transition: ease-out, 0.2s ease-in-out;
+}
+
+.followers {
+  margin: 20px 0;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.followers > p > span {
+  font-weight: 700;
+  margin: 0 4px;
+}
+
+.btn-div {
+  justify-content: space-between;
+}
+
+.search-light::placeholder {
+  color: var(--dark) !important;
+}
+
+#btn-section > input[type='search'] {
+  background-color: var(--light) !important;
+  color: var(--light-secondary) !important;
+  border: 1px solid var(--light-secondary);
+
+  padding: 6px 12px;
+  border-radius: 6px;
 }
 
 /* Here's what happens when you open the page on a mobile device */
@@ -302,5 +458,63 @@ input[type='search'] {
 
   .disappear {
     display: none !important;
+  }
+
+  .navigator {
+    padding-left: 20px;
+    position: absolute;
+
+    top: 380px;
+    right: 0;
+    left: 0;
+  }
+
+  .col-2 {
+    grid-template-columns: 100%;
+    grid-row-gap: 100px;
+    padding-top: 0;
+  }
+
+  .profile-picture {
+    width: 100px;
+  }
+
+  .profile-col {
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+  }
+
+  .mobile-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .user {
+    margin-left: 20px;
+  }
+
+  .smiley {
+    background-color: var(--light);
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    padding: 0;
+    padding: 5px 20px;
+    position: static;
+    margin-top: 20px;
+  }
+
+  .smiley > p {
+    display: inline;
+    padding-left: 8px;
+    font-size: 12px;
+    position: relative;
+    bottom: 2px;
+  }
+  .smiley > img {
+    display: inline;
+    margin: 0;
   }
 }
